@@ -1,7 +1,7 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <h1>kjdsfhkdsjhfjsdhfkjhskjh</h1>
+  <h1>hiiiii</h1>
 </template>
 
 <script>
