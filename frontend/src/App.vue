@@ -2,8 +2,8 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 
-  <h1>hello to you too</h1>
-  <h1>gdhghrd</h1>
+  <h1>hello</h1>
+  
 
 </template>
 
