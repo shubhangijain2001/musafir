@@ -1,6 +1,13 @@
 <template>
     <nav>
-     <h1>MUSAFIR- The Travel Log</h1>
+     <h1>MUSAFIR</h1>
+     <div class="nav-left">
+      <ul>
+        <li><router-link to="/products">Home</router-link></li>
+        <li><router-link to="/cart">About</router-link></li>
+        <li><a v-on:click="logout " href="/signup">Logout</a></li>
+      </ul>
+    </div>
 </nav>
      
    
@@ -14,11 +21,11 @@
    
    <style scoped>
 nav {
-  background-color: #333;
+  background-color:#131212;
   color: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0 1rem 0 1rem;
 }
 
 .nav-left ul,
