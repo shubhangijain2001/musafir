@@ -1,7 +1,12 @@
 <template>
  <div>
   <navBar/>
-  <img style="width:100%" src="../assets/udaipur_image1.jpg" alt="">
+  <div class="land-bg">
+    <h1 class="tag">Unleash Your Wanderlust, <br>Share Your Journeys</h1>
+    <div class="search">
+
+    </div>
+  </div>
   <p></p>
   <routerView/>
  </div>
@@ -18,3 +23,33 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.land-bg{
+    background-image: url("/home/shubhangi/Desktop/musafir/frontend/src/assets/udaipur_image1.jpg");
+    padding: 40%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.tag{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    color: white;
+    padding: 0;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.search{
+    position: absolute;
+    left:0;
+    top:100%;
+    height: 28%;
+    width: 100%;
+    margin-top: .00001%;
+    background-color: rgba(19,18,18,0.3);
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+</style>
