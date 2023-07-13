@@ -12,7 +12,6 @@
     </div>
     <div class="bottom-div">
         <div>
-            
         </div>
         <p class="bottom-p">dvgadfui</p>
     </div>
