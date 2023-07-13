@@ -16,7 +16,7 @@
             <i class="fa-solid fa-users fa-5x"></i>
         </div>
         <div>
-            <i class="fa-solid fa-image-polaroid-user fa-5x"></i>
+            <i class="fa-5x"></i>
         </div>
         <div>
             <i class="fa-solid fa-city fa-5x"></i>
