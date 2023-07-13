@@ -21,10 +21,14 @@
    </script>
    
    <style scoped>
-   @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+   
+
+  @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
 
 nav {
-  background-color:#161616;
+  /* background-color:#131212; */
+  background-color: #272932;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -32,7 +36,11 @@ nav {
 }
 
 .musafir{
-    font-family: 'Oleo Script Swash Caps', cursive;
+  
+  font-family: 'Satisfy', cursive;
+  font-size: 40px;
+  margin: .5%;
+  padding: 0;
 }
 .nav-left ul,
 .nav-right form {
