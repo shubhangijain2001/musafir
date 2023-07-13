@@ -2,11 +2,10 @@
     <div>
         <navBar1/>
     <div>
-        <p>Create account</p>
-        <input type="text" placeholder="Name" v-model="name"><br>
+        <p>Your travel memories, all in one place. Login and start sharing.</p>
         <input type="text" placeholder="Email" v-model="email"><br>
-        <input type="password" placeholder="Create Password" v-model="password"><br>             
-        <button @click="signup">Submit</button>
+        <input type="password" placeholder="Enter the Password" v-model="password"><br>             
+        <button @click="login">LogIn</button>
     </div>
 </div>
    
@@ -22,44 +21,21 @@
      },
      data(){
         return{
-            name:'',
             email:'',
             password:'',
 
         }
      },
      methods:{
-        async signup() {
-      // do something with the username, email, password
-      console.log('Signing up with:', this.name, this.email, this.password);
-        let result= await axios.post("http://localhost:5000/users",{
-        name:this.name,
-        email:this.email,
-        password:this.password
-     })
-      console.log(result.data)
-     if(result.data=='user already exist')
-     {
-        alert('user already exist!!')
-        console.log('hello')
-        this.name=''
-        this.email=''
-        this.password=''
-     }
-     //console.log(result.data)
-     /*let res= await axios.post(`http://localhost:5500/login`,{phone:parseInt(this.phone),password:this.password});
-     if(result.status==201)
-     {
-        localStorage.setItem('user',JSON.stringify(res.data[0]));
-        if(res.data[0].type=='user'){
-          this.$router.push({name:'Products'})
+        async login(){
+            console.log(this.email, this.password)
+            let result =await axios.post("http://localhost:5000/login",{email:this.email, password:this.password})
+            console.log('ggi')
+            console.log(result)
+            if(result.status==201 && result.data.length<=0){
+                console.log('invalid user')
+            }
         }
-        else if(res.data[0].type=='admin'){
-          this.$router.push({name:'addProduct'})
-        }
-    
-    }*/
-  },
      }
      
    }

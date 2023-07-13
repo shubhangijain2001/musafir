@@ -3,8 +3,9 @@
      <h1 class="musafir">Musafir</h1>
      <div class="nav-left">
       <ul>
-        <li><router-link to="/signup">Sign Up</router-link></li>
-        <li><router-link to="/login">Log in</router-link></li>
+        <li><router-link to="/products">Home</router-link></li>
+        <li><router-link to="/cart">About</router-link></li>
+        <li><a v-on:click="logout " href="/signup">Logout</a></li>
       </ul>
     </div>
 </nav>
