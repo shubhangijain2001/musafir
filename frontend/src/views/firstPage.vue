@@ -31,6 +31,11 @@ export default {
 
 <style scoped>
 
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+
+
   
 .land-bg{
     /* background-image: url("/home/shubhangi/Desktop/musafir/frontend/src/assets/udaipur_image1.jpg"); */
@@ -41,8 +46,11 @@ export default {
 }
 
 .tag{
+  /* font-family: 'Pacifico', cursive; */
+  font-family: 'Caveat', cursive;
+  font-size: 50px;
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 50%;
     color: white;
     padding: 0;
