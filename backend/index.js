@@ -30,7 +30,7 @@ app.get('/users', (req, res)=>{
     });
 
 })
-
+//signup
 app.post('/users', (req, res)=> {
     const user = req.body;
     console.log(user);
@@ -49,4 +49,20 @@ app.post('/users', (req, res)=> {
             res.send('user already exist') }
     })
     client.end;
+})
+
+//login
+app.post('/login',(req,res)=>{
+    const { email,password} =req.body
+    console.log(email,password)
+    client.query(`Select * from users where email='${email}' and password='${password}'`,(err, result)=>{
+        if(!err){
+            console.log(result.rows)
+            res.status(201).send(result.rows);
+        }
+        else{
+            console.log(err)
+            res.send('invalid user or password')
+        }
+    });
 })
