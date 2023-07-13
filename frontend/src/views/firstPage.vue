@@ -35,6 +35,7 @@
     </div>
     <div class="cities">
       <h1>Explore Destinations from these Cities</h1>
+      <i class="fa fa-car"></i>
     </div>
     <p></p>
     <routerView />
@@ -66,12 +67,11 @@ export default {
 
 
 .land-bg {
-  /* background-image: url("/home/shubhangi/Desktop/musafir/frontend/src/assets/udaipur_image1.jpg"); */
-  /* padding: 40%; */
+  position: relative; /* Add position relative to establish a containing block for absolute positioning */
   height: 100vh;
   background-image: url("https://i.ibb.co/5hfgMsp/udaipur-image1.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .tag {
@@ -79,7 +79,7 @@ export default {
   font-family: 'Caveat', cursive;
   font-size: 50px;
   position: absolute;
-  top: 15%;
+  top: 8%;
   left: 50%;
   color: white;
   padding: 0;
@@ -92,12 +92,10 @@ export default {
 .search {
   position: absolute;
   left: 0;
-  top: 84%;
+  bottom: 0;
   height: 200px;
   width: 100%;
   background-color: rgba(19, 18, 18, 0.3);
-  
-  
 }
 
 .search > p{
