@@ -4,6 +4,7 @@
      <div class="nav-left">
       <ul>
         <li><router-link to="/products">Home</router-link></li>
+        <li><router-link to="/signup">Sign Up</router-link></li>
         <li><router-link to="/cart">About</router-link></li>
         <li><a v-on:click="logout " href="/signup">Logout</a></li>
       </ul>
@@ -23,7 +24,7 @@
    @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
 
 nav {
-  background-color:#131212;
+  background-color:#161616;
   color: #fff;
   display: flex;
   justify-content: space-between;
