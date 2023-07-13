@@ -1,15 +1,10 @@
 <template>
     <nav>
      <h1 class="musafir">Musafir</h1>
-     <div class="nav-left">
-<<<<<<< HEAD
-      <ul class="menu">
-        <li><router-link to="/products">Home</router-link></li>
-=======
+     <div class="nav-left navbar-button-animation">
       <ul>
->>>>>>> origin/main
-        <li><router-link to="/signup">Sign Up</router-link></li>
-        <li><router-link to="/login">Log in</router-link></li>
+        <li><router-link to="/signup" alt="Sign Up">Sign Up</router-link></li>
+        <li><router-link to="/login" alt="Log in">Log in</router-link></li>
       </ul>
     </div>
 </nav>
@@ -23,7 +18,7 @@
    }
    </script>
    
-   <style scoped>
+<style scoped>
    
 
   @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
@@ -53,29 +48,60 @@ nav {
   
 }
 
-.menu {
+.nav-left ul {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  /* margin: 0; */
+  /* padding: 0; */
 }
 
 li {
+  font-family: Arial, Helvetica, sans-serif;
   margin-left: 1rem;
   font-size:18px;
   
 }
 
+
 a {
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
 
-a:hover {
-  font-size: 1rem;
+/* a:hover {
+  background-color: #a688b4;
+  color: black;
   border-radius: 0.25rem;
   border: none;
+} */
+
+div.navbar-button-animation a{
+  color: rgba(255, 255, 255, 0.7);
 }
+div.navbar-button-animation a:hover{
+  color: rgba(255, 255, 255, 1);
+}
+
+/* NAVBAR BUTTON ANIMATION */
+
+/* div.navbar-button-animation a:before{ */
+    /* position: absolute; */
+    /* color: #FFF; */
+    /* top: 0px; */
+    /* left: 0px; */
+    /* padding: 10px; */
+    /* overflow: hidden; */
+    /* content: attr(alt); */
+    /* transition: all 0.3s; */
+    /* transform: scale(0.8); */
+    /* opacity: 0; */
+/* } */
+/*  */
+/* div.navbar-button-animation a:hover:before{ */
+  /* transform: scale(1); */
+  /* opacity: 1; */
+  /*  */
+/* } */
 
 button[type="submit"] {
   padding: 0.5rem 1rem;
