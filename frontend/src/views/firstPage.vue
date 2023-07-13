@@ -20,15 +20,23 @@ export default {
   name: 'firstPage',
   components:{
     navBar
-  }
+  },
+  data() {
+  return {
+    imageUrl: require('@/assets/udaipur_image1.jpg').default
+  };
+}
 }
 </script>
 
 <style scoped>
+
+  
 .land-bg{
-    background-image: url("/home/shubhangi/Desktop/musafir/frontend/src/assets/udaipur_image1.jpg");
+    /* background-image: url("/home/shubhangi/Desktop/musafir/frontend/src/assets/udaipur_image1.jpg"); */
     padding: 40%;
-    background-repeat: no-repeat;
+     background-image: url("https://i.ibb.co/5hfgMsp/udaipur-image1.jpg"); 
+    background-repeat: no-repeat; 
     background-size: 100% auto;
 }
 
@@ -41,6 +49,7 @@ export default {
     text-align: center;
     transform: translate(-50%,-50%);
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    
 }
 .search{
     position: absolute;

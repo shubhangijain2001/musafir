@@ -1,6 +1,6 @@
 <template>
     <nav>
-     <h1>MUSAFIR</h1>
+     <h1 class="musafir">Musafir</h1>
      <div class="nav-left">
       <ul>
         <li><router-link to="/products">Home</router-link></li>
@@ -20,6 +20,8 @@
    </script>
    
    <style scoped>
+   @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+
 nav {
   background-color:#131212;
   color: #fff;
@@ -28,6 +30,9 @@ nav {
   padding: 0 1rem 0 1rem;
 }
 
+.musafir{
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
 .nav-left ul,
 .nav-right form {
   display: flex;
