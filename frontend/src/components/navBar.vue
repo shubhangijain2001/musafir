@@ -8,14 +8,14 @@
       </ul>
     </div>
 </nav>
-     
-   
-   </template>
+</template>
    
    <script>
    export default {
-     name: 'navBar',
+     name: 'navBar'
+
    }
+   
    </script>
    
 <style scoped>
