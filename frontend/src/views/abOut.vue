@@ -11,8 +11,18 @@
         <img src="https://i.ibb.co/q9nTHWH/kasol-image2.jpg">
     </div>
     <div class="bottom-div">
-        <div>
+        <div class="logo1">
+            <div>
+            <i class="fa-solid fa-users fa-5x"></i>
         </div>
+        <div>
+            <i class="fa-solid fa-image-polaroid-user fa-5x"></i>
+        </div>
+        <div>
+            <i class="fa-solid fa-city fa-5x"></i>
+        </div>
+        </div>
+        
         <p class="bottom-p">dvgadfui</p>
     </div>
 </div>
@@ -23,17 +33,13 @@
    
    <script>
    import navBar1 from '../components/navBar1.vue';
-   //import { faCity} from '@fortawesome/free-solid-svg-icons';
+   import '@fortawesome/fontawesome-free/css/all.css';
+
    export default {
      name: 'abOut',
      components:{
        navBar1,
      },
-     data() {
-     return {
-       imageUrl: require('@/assets/udaipur_image1.jpg').default
-     };
-   }
    }
    </script>
    
@@ -114,5 +120,20 @@
    }
    .bottom-p{
     color: #fff;
+   }
+   .fa-users{
+    padding: 10px;
+    margin-top:40px ;
+    color:#fff;
+   }
+   .fa-city{
+    padding: 10px;
+    margin-top:40px ;
+    color:#fff;
+   }
+   .logo1{
+    display:flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
    }
    </style>
