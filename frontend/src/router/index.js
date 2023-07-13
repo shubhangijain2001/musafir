@@ -3,6 +3,7 @@ import {createRouter, createWebHistory} from 'vue-router'
 import firstPage from "../views/firstPage.vue"
 import signUp from "../views/signUp.vue"
 import loGin from "../views/loGin.vue"
+import abOut from "../views/abOut.vue"
 
 const routes=[
     {
@@ -19,7 +20,13 @@ const routes=[
         path:'/login',
         name:'loGin',
         component:loGin
+    },
+    {
+        path:'/about',
+        name:'abOut',
+        component:abOut
     }
+
 ]
 
 const router= createRouter({

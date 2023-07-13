@@ -2,12 +2,7 @@
     <nav>
      <h1 class="musafir">Musafir</h1>
      <div class="nav-left">
-<<<<<<< HEAD
-      <ul class="menu">
-        <li><router-link to="/products">Home</router-link></li>
-=======
       <ul>
->>>>>>> origin/main
         <li><router-link to="/signup">Sign Up</router-link></li>
         <li><router-link to="/login">Log in</router-link></li>
       </ul>
@@ -19,8 +14,10 @@
    
    <script>
    export default {
-     name: 'navBar',
+     name: 'navBar'
+
    }
+   
    </script>
    
    <style scoped>
