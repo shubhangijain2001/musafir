@@ -2,7 +2,12 @@
     <nav>
      <h1 class="musafir">Musafir</h1>
      <div class="nav-left">
+<<<<<<< HEAD
+      <ul class="menu">
+        <li><router-link to="/products">Home</router-link></li>
+=======
       <ul>
+>>>>>>> origin/main
         <li><router-link to="/signup">Sign Up</router-link></li>
         <li><router-link to="/login">Log in</router-link></li>
       </ul>
@@ -45,19 +50,20 @@ nav {
   display: flex;
   align-items: center;
   margin-top: 25px;
+  
 }
 
-ul {
+.menu {
   display: flex;
   list-style: none;
   margin: 0;
-  
   padding: 0;
 }
 
 li {
   margin-left: 1rem;
-  font-size:16px;
+  font-size:18px;
+  
 }
 
 a {
@@ -66,11 +72,6 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
-}
-
-input[type="text"] {
-  padding: 0.5rem;
   font-size: 1rem;
   border-radius: 0.25rem;
   border: none;
