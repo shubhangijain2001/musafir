@@ -109,9 +109,10 @@ export default {
 
 
 .inputs {
-  display: flex;
-  justify-content: space-around; 
-  margin:0 25%;
+  display: grid; /*changed back to grid as even flex wasn't acting responsive*/
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 10px 25%;
 }
 
 .inputs input::placeholder{
