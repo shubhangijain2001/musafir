@@ -109,10 +109,9 @@ export default {
 
 
 .inputs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  grid-gap: 10px; 
-  margin:0 400px;
+  display: flex;
+  justify-content: space-around; 
+  margin:0 25%;
 }
 
 .inputs input::placeholder{
