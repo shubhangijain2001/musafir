@@ -5,7 +5,9 @@
   <div class="signup-container">
 
     <div class="left-div">
-      <!-- <img src="https://i.ibb.co/5hfgMsp/udaipur-image1.jpg" alt="signup image"> -->
+      <p>
+        Explore!
+      </p>
     </div>
 
     <div class="right-div">
@@ -54,7 +56,7 @@
         alert('user already exist!!')
         console.log('hello')
         this.name=''
-        this.email=''
+        this.email='' 
         this.password=''
      }
      //console.log(result.data)
