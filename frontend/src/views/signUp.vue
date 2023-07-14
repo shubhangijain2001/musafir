@@ -60,7 +60,7 @@ export default {
         this.email = ''
         this.password = ''
       }
-      //console.log(result.data)
+      console.log(result)
       /*let res= await axios.post(`http://localhost:5500/login`,{phone:parseInt(this.phone),password:this.password});
      if(result.status==201)
      {

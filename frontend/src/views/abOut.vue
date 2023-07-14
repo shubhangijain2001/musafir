@@ -12,15 +12,17 @@
     </div>
     <div class="bottom-div">
         <div class="logo1">
-            <div>
+            <div class="logos">
             <i class="fa-solid fa-users fa-5x"></i>
+            <h2>17</h2>
+            <p>Users</p>
         </div>
-        <div>
+        <div class="logos">
             <!-- <i class="fa-solid fa-note"></i> -->
             <i class="fa-solid fa-images fa-5x"></i>
 
         </div>
-        <div>
+        <div class="logos">
             <i class="fa-solid fa-city fa-5x"></i>
         </div>
         </div>
@@ -144,4 +146,13 @@
     /* flex-direction: column; */
     justify-content: space-around;
    }
+   .logos{
+    text-align: center;
+    color:#fff;
+    font-family: Arial, Helvetica, sans-serif
+   }
+   .logos h1{
+    margin-top: 100px;
+   }
+   
    </style>
