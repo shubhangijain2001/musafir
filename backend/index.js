@@ -45,6 +45,7 @@ app.post("/users", (req, res) => {
 
   client.query(insertQuery, (err, result) => {
     if (!err) {
+        console.log(result)
       console.log(result.rows);
       res.status(201).send(result.rows);
     } else {
