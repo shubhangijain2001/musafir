@@ -31,7 +31,7 @@
             console.log(this.email, this.password)
             let result =await axios.post("http://localhost:5000/login",{email:this.email, password:this.password})
             console.log('ggi')
-            console.log(result)
+            console.log(result.data)
             if(result.status==201 && result.data.length<=0){
                 console.log('invalid user')
             }
