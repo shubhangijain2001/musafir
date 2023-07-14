@@ -16,7 +16,9 @@
             <i class="fa-solid fa-users fa-5x"></i>
         </div>
         <div>
-            <i class="git fa-5x"></i>
+            <!-- <i class="fa-solid fa-note"></i> -->
+            <i class="fa-solid fa-images fa-5x"></i>
+
         </div>
         <div>
             <i class="fa-solid fa-city fa-5x"></i>
@@ -130,6 +132,12 @@
     padding: 10px;
     margin-top:40px ;
     color:#fff;
+   }
+   .fa-images{
+    padding: 10px;
+    margin-top:40px ;
+    color:#fff;
+    /* content:e202; */
    }
    .logo1{
     display:flex;

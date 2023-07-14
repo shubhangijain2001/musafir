@@ -19,7 +19,7 @@
         <input type="password" placeholder="Create Password" v-model="password"><br>
         <button @click="signup">SIGN UP</button>
         <p>
-          Already signed up? <a href="#" class="login-link">Log in.</a>
+          Already signed up? <router-link to="/login">Log In.</router-link>
         </p>
       </div>
 
@@ -207,13 +207,13 @@ export default {
   margin-top: 20px;
 }
 
-.right-div .login-link {
+.right-div a{
   color: white;
   text-decoration: underline;
   cursor: pointer;
 }
 
-.right-div .login-link:hover {
+.right-div a:hover {
   color: #458468;  
 }
 
