@@ -1,66 +1,67 @@
 <template>
 
   <!-- <navBar1 /> -->
-<div class="outer-div">
-  <div class="signup-container">
+  <div class="outer-div">
+    <div class="signup-container">
 
-    <div class="left-div">
-      <p>
-        Explore!
-      </p>
+      <div class="left-div">
+        <div>
+          <h1>Discover. Share. Inspire.</h1>
+          <p>Creating memories that last a lifetime.</p>
+        </div>
+      </div>
+
+
+      <div class="right-div">
+        <h1>Musafir</h1>
+        <input type="text" placeholder="Name" v-model="name"><br>
+        <input type="text" placeholder="Email" v-model="email"><br>
+        <input type="password" placeholder="Create Password" v-model="password"><br>
+        <button @click="signup">SIGN UP</button>
+        <p>
+          Already signed up? <a href="#" class="login-link">Log in.</a>
+        </p>
+      </div>
+
     </div>
-
-    <div class="right-div">
-      <h1>Musafir</h1>
-      <input type="text" placeholder="Name" v-model="name"><br>
-      <input type="text" placeholder="Email" v-model="email"><br>
-      <input type="password" placeholder="Create Password" v-model="password"><br>
-      <button @click="signup">SIGN UP</button>
-      <p>
-      Already signed up? <a href="#" class="login-link">Log in.</a>
-      </p>
-    </div>
-
   </div>
-</div>
 </template>
    
 <script>
   //  import navBar1 from "../components/navBar1.vue"
-   import axios from 'axios'
-   export default {
-     name: 'signUp',
-     components:{
-        // navBar1
-     },
-     data(){
-        return{
-            name:'',
-            email:'',
-            password:'',
+  import axios from 'axios'
+export default {
+  name: 'signUp',
+  components: {
+    // navBar1
+  },
+  data() {
+    return {
+      name: '',
+      email: '',
+      password: '',
 
-        }
-     },
-     methods:{
-        async signup() {
+    }
+  },
+  methods: {
+    async signup() {
       // do something with the username, email, password
       console.log('Signing up with:', this.name, this.email, this.password);
-        let result= await axios.post("http://localhost:5000/users",{
-        name:this.name,
-        email:this.email,
-        password:this.password
-     })
+      let result = await axios.post("http://localhost:5000/users", {
+        name: this.name,
+        email: this.email,
+        password: this.password
+      })
       console.log(result.data)
-     if(result.data=='user already exist')
-     {
+      if (result.data == 'user already exist') {
         alert('user already exist!!')
         console.log('hello')
-        this.name=''
-        this.email='' 
-        this.password=''
-     }
-     //console.log(result.data)
-     /*let res= await axios.post(`http://localhost:5500/login`,{phone:parseInt(this.phone),password:this.password});
+        this.name = ''
+        this.email = ''
+        this.password = ''
+      }
+      //console.log(result.data)
+      /*let res= await axios.post(`http://localhost:5500/login`,{phone:parseInt(this.phone),password:this.password});
      if(result.status==201)
      {
         localStorage.setItem('user',JSON.stringify(res.data[0]));
@@ -72,15 +73,17 @@
         }
     
     }*/
-  },
-     }
-     
-   }
+    },
+  }
+
+} 
 </script>
    
 <style scoped>
 
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Unbounded&display=swap');
+
 
 .outer-div {
   display: flex;
@@ -112,9 +115,12 @@
   background-size: cover;
   background-position: center;
   border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-
+  border-bottom-left-radius: 15px;;
+  display: flex;
+  align-items: center;
 }
+
+
 
 
 .left-div img {
@@ -151,9 +157,27 @@
   font-size: 16px;
 }
 
+
 .right-div h1,
-.right-div p {
+.right-div p,
+.left-div h1,
+.left-div p {
   color: white;
+}
+
+.left-div h1, .left-div p{
+  margin-left: 30px;
+}
+
+.left-div h1{
+  font-family: 'Unbounded', cursive;
+  font-size: 50px;
+}
+
+.left-div p{
+  font-family: 'Comfortaa', cursive;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .right-div h1{

@@ -1,23 +1,32 @@
 <template>
-    <div>
-        <navBar1/>
-    <div>
-        <p>Your travel memories, all in one place. Login and start sharing.</p>
-        <input type="text" placeholder="Email" v-model="email"><br>
-        <input type="password" placeholder="Enter the Password" v-model="password"><br>             
-        <button @click="login">LogIn</button>
+    <!-- <navBar1/> -->
+    <div class="outer-div">
+        <div class="login-container">
+            <div class="left-div">
+                <div>
+                    <h1>Your travel memories, all in one place.</h1> 
+                    <p>Login and start sharing.</p>
+                </div>
+            </div>
+            
+            <div class="right-div">
+                <h1>Musafir</h1>
+            <input type="text" placeholder="Email" v-model="email"><br>
+            <input type="password" placeholder="Enter the Password" v-model="password"><br>
+            <button @click="login">LOG IN</button>
+            </div>
+        </div>
     </div>
-</div>
-   
-   </template>
+
+</template>
    
    <script>
-   import navBar1 from "../components/navBar1.vue"
+//    import navBar1 from "../components/navBar1.vue"
    import axios from 'axios'
    export default {
      name: 'signUp',
      components:{
-        navBar1
+        // navBar1
      },
      data(){
         return{
