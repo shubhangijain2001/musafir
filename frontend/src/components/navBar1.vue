@@ -1,11 +1,11 @@
 <template>
     <nav>
      <h1 class="musafir" @click="landPage">Musafir</h1>
-     <div class="nav-left">
+     <div class="nav-left navbar-button-animation">
       <ul>
         <li><router-link to="/products">Home</router-link></li>
         <li><router-link to="/about">About</router-link></li>
-        <li><a v-on:click="logout " href="/signup">Logout</a></li>
+        <li><a v-on:click="logout " href="/signup">Logout</a></li>  <!--Logout should not be there on the signup page -->
       </ul>
     </div>
 </nav>
@@ -63,7 +63,8 @@ ul {
 
 li {
   margin-left: 1rem;
-  font-size:16px;
+  font-size:18px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -71,8 +72,15 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+/* a:hover { */
+ /* text-decoration: underline; */
+/* }  */
+
+div.navbar-button-animation a{
+  color: rgba(255, 255, 255, 0.7);
+}
+div.navbar-button-animation a:hover{
+  color: rgba(255, 255, 255, 1);
 }
 
 input[type="text"] {
