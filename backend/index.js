@@ -91,4 +91,17 @@ app.post("/login", (req, res) => {
   );
 });
 
+//users count
+app.get('/userscount',(req,res)=>{
+    client.query(`SELECT COUNT(*) from users`,(err,result)=>{
+        if(!err){
+            //console.log(result.rows[0])
+            res.status(201).send(result.rows)
+        }
+        else{
+            console.log(err)
+        }
+    })
+})
+
 app.use(authenticate);

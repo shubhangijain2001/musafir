@@ -28,7 +28,7 @@
 //    import navBar1 from "../components/navBar1.vue"
    import axios from 'axios'
    export default {
-     name: 'signUp',
+     name: 'loGin',
      components:{
         // navBar1
      },
