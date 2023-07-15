@@ -83,7 +83,7 @@
 .left-div {
   flex: 1.5;
   background-image: url('https://i.ibb.co/TMnPS5w/tajmahal.jpg');
-  background-color: #458468;
+  background-color: #726095;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top calc(0px - 10px);
