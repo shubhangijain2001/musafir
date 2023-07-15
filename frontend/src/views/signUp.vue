@@ -111,6 +111,7 @@ export default {
 .left-div {
   flex: 1.5;
   background-image: url('https://i.ibb.co/NSmF12D/forest-1866544-1280.jpg');
+  background-color: #458468;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

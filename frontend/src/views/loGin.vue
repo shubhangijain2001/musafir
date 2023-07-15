@@ -4,16 +4,20 @@
         <div class="login-container">
             <div class="left-div">
                 <div>
-                    <h1>Your travel memories, all in one place.</h1> 
+                    <h1>Your travel memories, all in one place.</h1>
                     <p>Login and start sharing.</p>
                 </div>
             </div>
-            
+
             <div class="right-div">
                 <h1>Musafir</h1>
-            <input type="text" placeholder="Email" v-model="email"><br>
-            <input type="password" placeholder="Enter the Password" v-model="password"><br>
-            <button @click="login">LOG IN</button>
+                <input type="text" placeholder="Email" v-model="email"><br>
+                <input type="password" placeholder="Enter your Password" v-model="password"><br>
+                <button @click="login">LOG IN</button>
+                <p>
+                    Haven't made an account yet? <router-link to="/signup">Sign Up.</router-link>
+                </p>
+                <p id="guest-link"><router-link to="/">Explore as a guest.</router-link></p>
             </div>
         </div>
     </div>
@@ -53,33 +57,148 @@
    <style scoped>
    
      
-   .land-bg{
-       /* background-image: url("/home/shubhangi/Desktop/musafir/frontend/src/assets/udaipur_image1.jpg"); */
-       padding: 40%;
-        background-image: url("https://i.ibb.co/5hfgMsp/udaipur-image1.jpg"); 
-       background-repeat: no-repeat; 
-       background-size: 100% auto;
-   }
-   
-   .tag{
-       position: absolute;
-       top: 20%;
-       left: 50%;
-       color: white;
-       padding: 0;
-       text-align: center;
-       transform: translate(-50%,-50%);
-       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-       
-   }
-   .search{
-       position: absolute;
-       left:0;
-       top:100%;
-       height: 28%;
-       width: 100%;
-       margin-top: .00001%;
-       background-color: rgba(19,18,18,0.3);
-       box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-   }
+   .outer-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  background-image: url('https://i.ibb.co/R341ccc/bg-purple-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.login-container{
+  width: 90vw;
+  height: 90vh;
+  background-color: #161616;
+  display: flex;
+  border-radius: 15px;
+  
+}
+
+.left-div {
+  flex: 1.5;
+  background-image: url('https://i.ibb.co/TMnPS5w/tajmahal.jpg');
+  background-color: #726095;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top calc(0px - 10px);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+.left-div img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.right-div{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.right-div input[type="text"],
+.right-div input[type="password"] {
+  background-color: black;
+  color: white;
+  padding: 18px;
+  margin-bottom: 5px; /* Reduce the space between the input fields */
+  border: none;
+  outline: none;
+  width: 60%;
+  font-size: 20px;
+  border-radius: 3px;
+}
+
+.right-div input::placeholder {
+  color: rgba(250, 250, 250, 0.7);
+  font-size: 16px;
+}
+
+
+.right-div h1,
+.right-div p,
+.left-div h1,
+.left-div p {
+  color: white;
+}
+
+.left-div h1, .left-div p{
+  margin-left: 30px;
+}
+
+.left-div h1{
+  font-family: 'Unbounded', cursive;
+  font-size: 50px;
+}
+
+.left-div p{
+  font-family: 'Comfortaa', cursive;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.right-div h1{
+  font-family: 'Satisfy', cursive;
+  font-size: 70px;
+}
+
+.right-div button {
+  background-color: #726095;
+  color: white;
+  margin-top: 20px;
+  padding: 2.5% 20%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s;
+  border-radius: 30px;
+}
+
+.right-div button:hover {
+  transform: scale(1.1);
+}
+
+.right-div p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+#guest-link{
+    margin-top: 0px !important;
+}
+
+.right-div a{
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.right-div a:hover {
+  color: #726095;  
+}
+
+
+@media (max-width: 600px) {
+  .left-div {
+    display: none;
+  }
+}
+
    </style>

@@ -32,7 +32,7 @@
 
 nav {
   /* background-color:#131212; */
-  background-color: #272932;
+  background-color: #161616;
   color: #fff;
   display: flex;
   justify-content: space-between;
