@@ -76,8 +76,9 @@ export default {
 
 .tag {
   /* font-family: 'Pacifico', cursive; */
-  font-family: 'Caveat', cursive;
-  font-size: 50px;
+  /* font-family: 'Caveat', cursive; */
+  font-family: 'Unbounded', cursive;
+  font-size: 35px;
   position: absolute;
   top: 8%;
   left: 50%;
