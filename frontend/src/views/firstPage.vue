@@ -6,7 +6,7 @@
       <div class="search">
         <p>Find the Adventure of a Lifetime</p>
         <div class="inputs">
-          
+
           <div id="input-1">
             <!-- <label for="city">City:</label><br> -->
             <input type="text" id="city" placeholder="Enter City">
@@ -21,10 +21,10 @@
               <option value="Worship Places">Worship Places</option>
             </select>
           </div>
-          
+
 
           <div id="input-3-btn">
-            <button class="search-btn" role="button">
+            <button class="search-btn" role="button" @click="redirect">
               Search
             </button>
           </div>
@@ -33,30 +33,102 @@
         </div>
       </div>
     </div>
+
+
     <div class="cities">
-      <h1>Explore Destinations from these Cities</h1>
-      <i class="fa fa-car"></i>
+
+      <h2>Explore Destinations from these Cities</h2>
+      <p>TAKE A LOOK AT THESE LOGS</p>
+
+      <div class="image-container">
+        <div v-for="image in cityImages" :key="image.id" class="image-wrapper">
+          <img :src="image.src" :alt="image.alt" @click="redirect" class="image">
+        </div>
+      </div>
+
     </div>
-    <p></p>
+
+    <div class="destinations">
+
+<h2>Top Destinations Around the Country</h2>
+<p>DISCOVER. SHARE. EXPLORE.</p>
+
+<div class="image-container">
+  <div v-for="image in destinationImages" :key="image.id" class="image-wrapper">
+    <img :src="image.src" :alt="image.alt" @click="redirect" class="image">
+  </div>
+</div>
+
+</div>
+
     <routerView />
   </div>
-
 
 </template>
 
 <script>
+
+
+
 import navBar from '../components/navBar.vue';
 export default {
   name: 'firstPage',
-  components:{
+  components: {
     navBar
   },
   data() {
-  return {
-    imageUrl: require('@/assets/udaipur_image1.jpg').default
-  };
-}
-}
+    return {
+      imageUrl: require('@/assets/udaipur_image1.jpg').default,
+      cityImages: [{
+          id: 1,
+          src: 'https://i.ibb.co/F8ztY8Z/Jaipur-Rajasthan.jpg',
+          alt: 'Jaipur-Rajasthan'
+        },
+        {
+          id: 2,
+          src: 'https://i.ibb.co/RhPwM7r/Kerala.jpg',
+          alt: 'Kerela'
+        },
+        {
+          id: 3,
+          src: 'https://i.ibb.co/1R42rvP/Mumbai-Maharashtra.jpg',
+          alt: 'Mumbai-Maharashtra'
+        },
+        {
+          id: 4,
+          src: 'https://i.ibb.co/y4SfhYx/Rann-of-Kutch-Gujarat.jpg',
+          alt: 'Rann-of-Kutch-Gujarat'
+        }
+      ],
+      destinationImages: [{
+          id: 1,
+          src: 'https://i.ibb.co/jr3h1VW/Mysore-Palace-Mysore.jpg',
+          alt: 'Mysore-Palace-Mysore'
+        },
+        {
+          id: 2,
+          src: 'https://i.ibb.co/FWNSLVM/Nubra-Valley-Ladakh.jpg',
+          alt: 'Nubra-Valley-Ladakh'
+        },
+        {
+          id: 3,
+          src: 'https://i.ibb.co/HDQttJL/Statue-of-Unity-Gujarat.jpg',
+          alt: 'Statue-of-Unity-Gujarat'
+        },
+        {
+          id: 4,
+          src: 'https://i.ibb.co/NYCFbjX/Taj-Mahal-Agra.jpg',
+          alt: 'Taj-Mahal-Agra'
+        }
+      ]
+    };
+  },
+  methods:{
+    redirect(){
+      this.$router.push({name:'loGin'})
+    }
+  }
+} 
 </script>
 
 <style scoped>
@@ -80,7 +152,7 @@ export default {
   font-family: 'Unbounded', cursive;
   font-size: 35px;
   position: absolute;
-  top: 8%;
+  top: 10%;
   left: 50%;
   color: white;
   padding: 0;
@@ -191,5 +263,58 @@ font-size: 16px;
   box-shadow: none;
   transform: translateY(0);
 }
+
+.cities, .destinations{
+  padding-top: 70px;
+  padding-bottom: 85px;
+}
+
+.cities h2, .cities p, .destinations h2, .destinations p{
+  text-align: center;
+}
+.cities h2, .destinations h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  letter-spacing: .03cm;
+  margin-bottom: 10px;
+}
+
+.cities p, .destinations p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  letter-spacing: .03cm;
+}
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-wrapper {
+  width: 20%; 
+  margin: 10px; 
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.1); 
+}
+
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.destinations{
+  background-color: #161616;
+}
+
+.destinations h2, .destinations p{
+  color: white;
+}
+
+
 
 </style>

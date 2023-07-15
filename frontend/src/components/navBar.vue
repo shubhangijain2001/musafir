@@ -26,7 +26,7 @@
 
 nav {
   /* background-color:#131212; */
-  background-color: #272932;
+  background-color: #161616;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -106,7 +106,7 @@ div.navbar-button-animation a:hover{
 button[type="submit"] {
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  background-color: #130101;
+  background-color: #161616;
   color: #fff;
   border: none;
   border-radius: 0.25rem;
