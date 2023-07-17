@@ -34,11 +34,34 @@
         
     </div>
     <div class="bottom">
-            <h2>Get in touch with us</h2>
-            <div class="img1"><img src="https://i.ibb.co/gtmQxZx/profile1.png" alt="">
-            <img src="https://i.ibb.co/TWYnkYv/profile2.jpg" alt=""></div>
-            <div class="link">
-                <p></p>
+            <h2>Popular services that we offer</h2>
+            <p>Take a look at them</p>
+            <div class="imgs">
+                <div class="description-wrapper">
+            <div class="img-wrapper">
+                <div class="img1"> 
+                </div>
+                <p><b>DISCOVER</b></p>
+            </div>
+            <p>By discovering travel options, individuals can broaden their horizons, fulfill their wanderlust, and create unforgettable experiences that suit their preferences and interests.</p>
+        </div>
+        <div>
+            <div class="img-wrapper">
+                <div class="img2"> 
+                </div>
+                <p><b>SHARE</b>
+                </p>
+            </div>
+            <p> Sharing trip experiences allows individuals to relive and preserve their travel memories, inspire others to explore new destinations, and foster a sense of connection and cultural exchange.</p>
+        </div>
+        <div>
+            <div class="img-wrapper">
+                <div class="img3"> 
+                </div>
+                <p><b>EXPLORE</b></p>
+            </div>
+            <p>Exploring a trip entails delving into the cultural, historical, and natural attractions of a destination, understanding local customs and traditions, and seeking out unique experiences and hidden gems. </p>
+        </div>
             </div>
 
         </div>
@@ -95,7 +118,7 @@ import navBar1 from '../components/navBar1.vue';
    }
    .bottom-div{
     background:#161616;
-    height:90vh;
+    height:80vh;
     width:100%;
    }
    .bottom-p{
@@ -146,16 +169,69 @@ import navBar1 from '../components/navBar1.vue';
    .bottom h2{
     font-size: 30px;
     text-align: center;
+    margin-bottom: 10px;
+    color: rgb(34, 34, 34)
    }
-   .bottom img{
-    height:120px;
-    width:120px;
-    border-radius: 100%;
+   .bottom p{
+    text-align: center;
+    color:#9F9797;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0px;
    }
    .img1{
+    height:60px;
+    width:60px;
+    background-image:url('https://i.ibb.co/ySWbwbb/calendar-2.png') ;
+    background-size: cover;
+   } 
+    .img1:hover{
+    background-image: url('https://i.ibb.co/CvwxF0s/calendar-3.png');
+   }
+   .img2{
+    height:60px;
+    width:60px;
+    background-image:url('https://i.ibb.co/ChL25Dy/team.png') ;
+    background-size: cover;
+   }
+    .img2:hover{
+    background-image: url('https://i.ibb.co/hF6r686/team-1.png');
+   }
+   .img3{
+    height: 60px;
+    width:60px;
+    background-image:url('https://i.ibb.co/4g69Dbw/travel-bag.png') ;
+    background-size: cover;
+   }
+    .img3:hover{
+    background-image: url('https://i.ibb.co/0ByDbbw/travel-bag-1.png');
+   }
+   .imgs{
     display: flex;
     justify-content: space-around;
     flex-direction: rows;
     margin-top: 40px;
+    padding: 0 20px;
+   } 
+   .img1 p{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-gap:45px;
+   }
+   .img-wrapper{
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 130px;
+    letter-spacing: 0.01cm;
+
+   }
+   .img-wrapper p{
+    color: rgb(34, 34, 34);
+    font-size: 15px;
+   }
+.imgs p{
+    color:rgb(34, 34, 34);
+    font-size: 19px;
    }
    </style>
