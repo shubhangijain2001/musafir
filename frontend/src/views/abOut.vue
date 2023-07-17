@@ -5,6 +5,7 @@
         <div class="about1">
             <p>Welcome to Musafir-The Travel Log, the ultimate destination for travel enthusiasts and adventure seekers.
                 Whether you're a seasoned globetrotter or a passionate explorer, this platform is designed to help you
+import PostTemplate from '@/components/postTemplate.vue';
                 capture, share, and relive your unforgettable travel experiences.
 
                 <br><br>At Musafir-The Travel Log, we believe that every journey is unique and deserves to be
@@ -75,6 +76,7 @@
             </div>
 
         </div>
+        <postTemplate />
         <FooTer />
     </div>
 
@@ -87,6 +89,7 @@
 import navBar1 from '../components/navBar1.vue';
    import '@fortawesome/fontawesome-free/css/all.css';
    import FooTer from "../components/FooTer.vue"
+   import PostTemplate from '../components/postTemplate.vue';
 
    export default {
      name: 'abOut',
@@ -96,9 +99,10 @@ import navBar1 from '../components/navBar1.vue';
         }
      },
      components:{
-       navBar1,
-       FooTer
-     },
+    navBar1,
+    FooTer,
+    PostTemplate
+},
      async mounted(){
         let result =await axios.get('http://localhost:5000/userscount')
         console.log(result)
