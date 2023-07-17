@@ -5,6 +5,7 @@ import signUp from "../views/signUp.vue"
 import loGin from "../views/loGin.vue"
 import abOut from "../views/abOut.vue"
 
+
 const routes=[
     {
         path:'/',
@@ -26,6 +27,7 @@ const routes=[
         name:'abOut',
         component:abOut
     }
+
 
 ]
 
