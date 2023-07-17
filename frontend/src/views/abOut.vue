@@ -1,80 +1,92 @@
 <template>
-<div>
-     <navBar1/>
-     <h1>About Us</h1>
-     <div class="about1">
-        <p>Welcome to Musafir-The Travel Log, the ultimate destination for travel enthusiasts and adventure seekers. Whether you're a seasoned globetrotter or a passionate explorer, this platform is designed to help you capture, share, and relive your unforgettable travel experiences.
+    <div>
+        <navBar1 />
+        <h1>About Us</h1>
+        <div class="about1">
+            <p>Welcome to Musafir-The Travel Log, the ultimate destination for travel enthusiasts and adventure seekers.
+                Whether you're a seasoned globetrotter or a passionate explorer, this platform is designed to help you
+                capture, share, and relive your unforgettable travel experiences.
 
-        <br><br>At Musafir-The Travel Log, we believe that every journey is unique and deserves to be celebrated. Our mission is to provide you with a seamless and immersive platform where you can create your personal travel log, showcase your adventures, and connect with like-minded individuals from around the world.
+                <br><br>At Musafir-The Travel Log, we believe that every journey is unique and deserves to be
+                celebrated. Our mission is to provide you with a seamless and immersive platform where you can create
+                your personal travel log, showcase your adventures, and connect with like-minded individuals from around
+                the world.
 
-        </p>
-        <img src="https://i.ibb.co/q9nTHWH/kasol-image2.jpg">
-    </div>
-    <div class="bottom-div">
-        <h1>Travelling – it leaves you speechless, then turns you into a storyteller</h1>
-        <div class="logo1">
-            <div class="logos">
-            <i class="fa-solid fa-users fa-5x"></i>
-            <h2>{{ userscount }}</h2>
-            <p>Users</p>
+            </p>
+            <img src="https://i.ibb.co/q9nTHWH/kasol-image2.jpg">
         </div>
-        <div class="logos">
-            <!-- <i class="fa-solid fa-note"></i> -->
-            <i class="fa-solid fa-images fa-5x"></i>
-            <h2>20</h2>
-            <p>Posts</p>
+        <div class="bottom-div">
+            <h1>Travelling – it leaves you speechless, then turns you into a storyteller</h1>
+            <div class="logo1">
+                <div class="logos">
+                    <i class="fa-solid fa-users fa-5x"></i>
+                    <h2>{{ userscount }}</h2>
+                    <p>Users</p>
+                </div>
+                <div class="logos">
+                    <!-- <i class="fa-solid fa-note"></i> -->
+                    <i class="fa-solid fa-images fa-5x"></i>
+                    <h2>20</h2>
+                    <p>Posts</p>
+
+                </div>
+                <div class="logos">
+                    <i class="fa-solid fa-city fa-5x"></i>
+                    <h2>5</h2>
+                    <p>Cities</p>
+                </div>
+            </div>
 
         </div>
-        <div class="logos">
-            <i class="fa-solid fa-city fa-5x"></i>
-            <h2>5</h2>
-            <p>Cities</p>
-        </div>
-        </div>
-        
-    </div>
-    <div class="bottom">
+        <div class="bottom">
             <h2>Popular services that we offer</h2>
             <p>Take a look at them</p>
             <div class="imgs">
                 <div class="description-wrapper">
-            <div class="img-wrapper">
-                <div class="img1"> 
+                    <div class="img-wrapper">
+                        <div class="img1">
+                        </div>
+                        <p><b>DISCOVER</b></p>
+                    </div>
+                    <p>By discovering travel options, individuals can broaden their horizons, fulfill their wanderlust,
+                        and create unforgettable experiences that suit their preferences and interests.</p>
                 </div>
-                <p><b>DISCOVER</b></p>
-            </div>
-            <p>By discovering travel options, individuals can broaden their horizons, fulfill their wanderlust, and create unforgettable experiences that suit their preferences and interests.</p>
-        </div>
-        <div>
-            <div class="img-wrapper">
-                <div class="img2"> 
+                <div>
+                    <div class="img-wrapper">
+                        <div class="img2">
+                        </div>
+                        <p><b>SHARE</b>
+                        </p>
+                    </div>
+                    <p> Sharing trip experiences allows individuals to relive and preserve their travel memories,
+                        inspire others to explore new destinations, and foster a sense of connection and cultural
+                        exchange.</p>
                 </div>
-                <p><b>SHARE</b>
-                </p>
-            </div>
-            <p> Sharing trip experiences allows individuals to relive and preserve their travel memories, inspire others to explore new destinations, and foster a sense of connection and cultural exchange.</p>
-        </div>
-        <div>
-            <div class="img-wrapper">
-                <div class="img3"> 
+                <div>
+                    <div class="img-wrapper">
+                        <div class="img3">
+                        </div>
+                        <p><b>EXPLORE</b></p>
+                    </div>
+                    <p>Exploring a trip entails delving into the cultural, historical, and natural attractions of a
+                        destination, understanding local customs and traditions, and seeking out unique experiences and
+                        hidden gems. </p>
                 </div>
-                <p><b>EXPLORE</b></p>
-            </div>
-            <p>Exploring a trip entails delving into the cultural, historical, and natural attractions of a destination, understanding local customs and traditions, and seeking out unique experiences and hidden gems. </p>
-        </div>
             </div>
 
         </div>
-</div>
+        <FooTer />
+    </div>
 
-     
-   
-   </template>
+
+
+</template>
    
    <script>
    import axios from 'axios';
 import navBar1 from '../components/navBar1.vue';
    import '@fortawesome/fontawesome-free/css/all.css';
+   import FooTer from "../components/FooTer.vue"
 
    export default {
      name: 'abOut',
@@ -85,6 +97,7 @@ import navBar1 from '../components/navBar1.vue';
      },
      components:{
        navBar1,
+       FooTer
      },
      async mounted(){
         let result =await axios.get('http://localhost:5000/userscount')
