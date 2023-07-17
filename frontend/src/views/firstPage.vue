@@ -50,16 +50,36 @@
 
     <div class="destinations">
 
-<h2>Top Destinations Around the Country</h2>
-<p>DISCOVER. SHARE. EXPLORE.</p>
+      <h2>Top Destinations Around the Country</h2>
+      <p>DISCOVER. SHARE. EXPLORE.</p>
 
-<div class="image-container">
-  <div v-for="image in destinationImages" :key="image.id" class="image-wrapper">
-    <img :src="image.src" :alt="image.alt" @click="redirect" class="image">
+      <div class="image-container">
+        <div v-for="image in destinationImages" :key="image.id" class="image-wrapper">
+          <img :src="image.src" :alt="image.alt" @click="redirect" class="image">
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="team">
+  <h2>Meet the Team</h2>
+  <p>VISIT OUR GITHUB PROFILES</p>
+
+  <div class="team-members">
+    <a href="https://github.com/shubhangijain2001" class="team-member" target="_blank">
+      <img src="https://i.ibb.co/0VyxT5t/Shubhangi-avatar.png" alt="Shubhangi-avatar">
+          <p>Shubhangi Jain</p>
+    </a>
+    <a href="https://github.com/fal4782" class="team-member" target="_blank">
+      <img src="https://i.ibb.co/RyhKcYX/Falguni-avatar.png" alt="Falguni-avatar">
+          <p>Falguni</p>
+    </a>
+    <!-- Add more team members as needed -->
   </div>
 </div>
 
-</div>
+<FooTer></FooTer>
 
     <routerView />
   </div>
@@ -69,12 +89,14 @@
 <script>
 
 
-
+import FooTer from "../components/FooTer.vue"
 import navBar from '../components/navBar.vue';
+
 export default {
   name: 'firstPage',
   components: {
-    navBar
+    navBar,
+    FooTer
   },
   data() {
     return {
@@ -139,7 +161,7 @@ export default {
 
 
 .land-bg {
-  position: relative; /* Add position relative to establish a containing block for absolute positioning */
+  position: relative; 
   height: 100vh;
   background-image: url("https://i.ibb.co/5hfgMsp/udaipur-image1.jpg");
   background-repeat: no-repeat;
@@ -264,22 +286,22 @@ font-size: 16px;
   transform: translateY(0);
 }
 
-.cities, .destinations{
+.cities, .destinations, .team{
   padding-top: 70px;
   padding-bottom: 85px;
 }
 
-.cities h2, .cities p, .destinations h2, .destinations p{
+.cities h2, .cities p, .destinations h2, .destinations p, .team h2, .team p{
   text-align: center;
 }
-.cities h2, .destinations h2{
+.cities h2, .destinations h2, .team h2{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 35px;
   letter-spacing: .03cm;
   margin-bottom: 10px;
 }
 
-.cities p, .destinations p{
+.cities p, .destinations p, .team p{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 20px;
   letter-spacing: .03cm;
@@ -297,7 +319,8 @@ font-size: 16px;
 }
 
 .image-wrapper:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
+  cursor: pointer; 
 }
 
 
@@ -315,6 +338,49 @@ font-size: 16px;
   color: white;
 }
 
+.team-members {
+  display: flex;
+  justify-content: center;
+}
+
+.team-member {
+  text-align: center;
+  margin: 20px;
+  border-radius: 10px; /* Add border radius of 10px */
+  overflow: hidden; /* To clip the border-radius on the image */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add initial shadow effect */
+  transition: box-shadow 0.3s ease-in-out; 
+  transition: transform 0.3s ease; 
+  padding: 20px; /* Add space around the .team-member content */
+}
+
+
+.team-member:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+.team-member + .team-member {
+  margin-left: 4%; /* Add space between .team-member elements */
+}
+
+
+.team-member img {
+  width: 200px; /* Adjust the profile picture width as per your preference */
+  height: 200px; /* Adjust the profile picture height as per your preference */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-member p {
+  margin-top: 10px;
+}
+
+/* Remove default link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 
 </style>
