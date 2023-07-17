@@ -45,6 +45,7 @@ nav {
   font-size: 40px;
   margin: .5%;
   padding: 0;
+  cursor: pointer;
 }
 .nav-left ul,
 .nav-right form {

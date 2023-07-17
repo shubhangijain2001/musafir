@@ -117,7 +117,7 @@
   background-color: black;
   color: white;
   padding: 18px;
-  margin-bottom: 5px; /* Reduce the space between the input fields */
+  margin-bottom: 5px;
   border: none;
   outline: none;
   width: 60%;
