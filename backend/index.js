@@ -7,6 +7,8 @@ const jwt = require("jsonwebtoken");
 const authenticate = require("./verifyToken.js");
 // app.use(authenticate)
 
+const multer=require("multer");
+
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
@@ -22,6 +24,24 @@ client.connect((err) => {
   else console.log("Database connected");
 });
 //console.log('jooo')
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    //console.log(file)
+    cb(null, './images')
+  },
+  filename: function (req, file, cb) {
+    //const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+    //cb(null, file.fieldname + '-' + uniqueSuffix)
+    cb(null, `${Date.now()}--${file.originalname}`)
+  }
+})
+app.use(express.urlencoded({extended:false}))
+const upload = multer({ storage: storage }).array('avatar')
+app.post('/upload', upload, function (req, res, next) {
+  console.log(req.body);
+  console.log(req.files);
+})
+
 
 app.get("/users", (req, res) => {
   //console.log("bsfhdguys");
