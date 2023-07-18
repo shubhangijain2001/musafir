@@ -1,11 +1,12 @@
 <template>
     <nav>
-     <h1 class="musafir" @click="landPage">Musafir</h1>
+     <h1 class="musafir" @click="homePage">Musafir</h1>
      <div class="nav-left navbar-button-animation">
       <ul>
-        <li><router-link to="/products">Home</router-link></li>
+        <!-- <li><router-link to="/products">Home</router-link></li> -->
         <li><router-link to="/about">About</router-link></li>
-        <li><a v-on:click="logout " href="/signup">Logout</a></li>  <!--Logout should not be there on the signup page -->
+        <li><router-link to="/profile">Profile</router-link></li>
+        <li><a v-on:click="logout " href="/signup">Logout</a></li>  
       </ul>
     </div>
 </nav>
@@ -17,8 +18,8 @@
    export default {
      name: 'navBar',
      methods:{
-        landPage(){
-            this.$router.push({name:'firstPage'})
+        homePage(){
+          this.$router.push({name:'homePage'})
         }
      }
    }
