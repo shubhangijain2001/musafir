@@ -1,68 +1,63 @@
 <template>
 
-    <div class="post-container">
-        <div class="left-div">
+  <div class="post-container">
 
-            <section class="carousel-container">
-  <div class="slider-wrapper">
-    <div class="slider">
-      <img v-for="(image, index) in carouselImages" :key="index" :id="`slide-${index + 1}`" :src="image.src" />
+    <div class="left-div">
+      <section class="carousel-container">
+        <div class="slider-wrapper">
+          <div class="slider">
+            <img v-for="(image, index) in carouselImages" :key="index" :id="`slide-${index + 1}`" :src="image.src" />
+          </div>
+          <div class="slider-nav">
+            <a v-for="(image, index) in carouselImages" :key="index" :href="`#slide-${index + 1}`"></a>
+          </div>
+        </div>
+      </section>
     </div>
-    <div class="slider-nav">
-      <a v-for="(image, index) in carouselImages" :key="index" :href="`#slide-${index + 1}`"></a>
+
+    <div class="right-div">
+      <p class="user-name"> {{ userName }}</p>
+
+      <div class="location">
+        <i class="fa-solid fa-location-dot"></i>
+        <p class="location-name">{{ placeName }} || {{ cityName }} || {{ stateName }}</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="content">{{ postContent }}</p>
+
+      <!-- Star rating for value for money -->
+      <div class="rating">
+        <p class="rating-title">Value for Money:</p>
+        <span v-for="star in maxStars" :key="star">
+          <i class="fa-solid"
+            :class="{ 'fa-star': star <= affordabilityRating, 'fa-star-empty': star > affordabilityRating }"></i>
+        </span>
+      </div>
+
+      <!-- Star rating for safety & security-->
+      <div class="rating">
+        <p class="rating-title">Safety & Security:</p>
+        <span v-for="star in maxStars" :key="star">
+          <i class="fa-solid" :class="{ 'fa-star': star <= safetyRating, 'fa-star-empty': star > safetyRating }"></i>
+        </span>
+      </div>
+
+      <!-- Star rating for overall exp -->
+      <div class="rating">
+        <p class="rating-title">Overall Experience:</p>
+        <span v-for="star in maxStars" :key="star">
+          <i class="fa-solid"
+            :class="{ 'fa-star': star <= overallExpRating, 'fa-star-empty': star > overallExpRating }"></i>
+        </span>
+      </div>
+
+
+
+      <!-- <div class="divider"></div> -->
     </div>
   </div>
-</section>
-
-
-
-
-        </div>
-
-        <div class="right-div">
-            <p class="user-name"> {{ userName }}</p>
-
-            <div class="location">
-                <i class="fa-solid fa-location-dot"></i>
-                <p class="location-name">{{ placeName }} || {{ cityName }} || {{ stateName }}</p>
-            </div>
-
-            <div class="divider"></div>
-
-            <p class="content">{{ postContent }}</p>
-
-            <!-- Star rating for affordability -->
-            <div class="rating">
-                <p class="rating-title">Affordability:</p>
-                <span v-for="star in maxStars" :key="star">
-                    <i class="fa-solid"
-                        :class="{ 'fa-star': star <= affordabilityRating, 'fa-star-empty': star > affordabilityRating }"></i>
-                </span>
-            </div>
-
-            <!-- Star rating for safety -->
-            <div class="rating">
-                <p class="rating-title">Safety:</p>
-                <span v-for="star in maxStars" :key="star">
-                    <i class="fa-solid"
-                        :class="{ 'fa-star': star <= safetyRating, 'fa-star-empty': star > safetyRating }"></i>
-                </span>
-            </div>
-
-            <!-- Star rating for hospitality -->
-            <div class="rating">
-                <p class="rating-title">Hospitality:</p>
-                <span v-for="star in maxStars" :key="star">
-                    <i class="fa-solid"
-                        :class="{ 'fa-star': star <= hospitalityRating, 'fa-star-empty': star > hospitalityRating }"></i>
-                </span>
-            </div>
-
-
-
-            <!-- <div class="divider"></div> -->
-        </div>
-    </div>
 
 
 </template>
@@ -74,12 +69,11 @@
 
 export default {
   components: {
-    
+
   },
   data() {
     return {
-        carouselImages: [
-        {
+      carouselImages: [{
           id: 1,
           src: 'https://i.ibb.co/TMnPS5w/tajmahal.jpg'
         },
@@ -87,21 +81,19 @@ export default {
           id: 2,
           src: 'https://i.ibb.co/NSmF12D/forest-1866544-1280.jpg',
         },
-    ],
+      ],
       userName: 'John Doe',
       placeName: 'Akshardham Temple',
       cityName: 'Gandhinagar',
       stateName: 'Gujrat',
       postContent: "'Akshardham' literally means the divine abode of God. It is an eternal place for one to offer devotion and experience everlasting peace. Swaminarayan Akshardham at Gandhinagar is a mandir – a Hindu house of worship, a dwelling place for God, and a spiritual and cultural campus dedicated to devotion, education and unification. The spiritual premise of Akshardham is that each soul is potentially divine. Whether we are serving the family, our neighbors, the country, or people all around the world, each act of kindness can help one move towards divinity. Each prayer is an endeavor in self-improvement and a step closer to God.",
-      affordabilityRating: 2, 
-        safetyRating: 4, 
-        hospitalityRating: 5,
-        maxStars: 5,
+      affordabilityRating: 2,
+      safetyRating: 4,
+      overallExpRating: 5,
+      maxStars: 5,
     };
   },
-};
-
-
+}
 </script>
 
 
@@ -113,8 +105,11 @@ export default {
   background-color: #161616;
   display: flex;
   border-radius: 15px;
-  margin: 0 10%;
+  margin: auto;
+  /* margin: 0 10%; */
   align-items: center;
+  margin-bottom: 50px;
+  box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
   
 }
 

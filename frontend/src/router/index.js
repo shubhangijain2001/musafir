@@ -5,6 +5,9 @@ import signUp from "../views/signUp.vue"
 import loGin from "../views/loGin.vue"
 import abOut from "../views/abOut.vue"
 import postForm from "../components/postForm.vue"
+import homePage from "../views/homePage.vue"
+import poSts from "../views/poSts.vue"
+import myPosts from "../views/myPosts.vue"
 
 
 const routes=[
@@ -32,6 +35,21 @@ const routes=[
         path:'/postform',
         name:'postForm',
         component:postForm
+    },
+    {
+       path:'/home',
+        name:'homePage',
+        component:homePage
+    },
+    {
+        path:'/profile',
+        name:'myPosts',
+        component:myPosts
+    },
+    {
+        path:'/posts',
+        name:'poSts',
+        component: poSts
     }
 
 

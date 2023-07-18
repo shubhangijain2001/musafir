@@ -1,6 +1,6 @@
 <template>
     <nav>
-     <h1 class="musafir">Musafir</h1>
+     <h1 class="musafir" @click="landPage">Musafir</h1>
      <div class="nav-left navbar-button-animation">
       <ul>
         <li><router-link to="/signup" alt="Sign Up">Sign Up</router-link></li>
@@ -12,7 +12,12 @@
    
    <script>
    export default {
-     name: 'navBar'
+     name: 'navBar',
+     methods:{
+      landPage(){
+            this.$router.push({name:'firstPage'})
+        },
+     }
 
    }
    
