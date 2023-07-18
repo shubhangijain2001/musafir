@@ -4,6 +4,7 @@ import firstPage from "../views/firstPage.vue"
 import signUp from "../views/signUp.vue"
 import loGin from "../views/loGin.vue"
 import abOut from "../views/abOut.vue"
+import postForm from "../components/postForm.vue"
 import homePage from "../views/homePage.vue"
 import poSts from "../views/poSts.vue"
 import myPosts from "../views/myPosts.vue"
@@ -31,7 +32,12 @@ const routes=[
         component:abOut
     },
     {
-        path:'/home',
+        path:'/postform',
+        name:'postForm',
+        component:postForm
+    },
+    {
+       path:'/home',
         name:'homePage',
         component:homePage
     },

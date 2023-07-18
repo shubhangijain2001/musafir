@@ -79,12 +79,7 @@
 </div>
 
 <FooTer></FooTer>
-<div>
-  <!-- <form action="/upload" method="post" enctype="multipart/form-data"> -->
-  <input type="file" name="avatar" @change="handleFileChange" multiple>
-  <button @click="submit">Submit</button>
-<!-- </form> -->
-</div>
+
     <routerView />
   </div>
 
@@ -95,7 +90,7 @@
 
 import FooTer from "../components/FooTer.vue"
 import navBar from '../components/navBar.vue';
-import axios from "axios"
+
 
 export default {
   name: 'firstPage',
@@ -155,31 +150,6 @@ export default {
     redirect(){
       this.$router.push({name:'loGin'})
     },
-    handleFileChange(event) {
-    this.image= event.target.files;
-    console.log('dvhgyu',this.image)
-  },
-    async submit() {
-  const formData = new FormData();
-  console.log('image',this.image.length)
-  for(let i=0;i<this.image.length;i++){
-    formData.append('avatar', this.image[i]);
-  }
-   // Assuming "selectedFile" contains the file object
-  console.log(formData)
-  try {
-    const result = await axios.post('http://localhost:5000/upload', formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data'
-      }
-    });
-    console.log(result);
-    // Handle the response from the server
-  } catch (error) {
-    console.error(error);
-    // Handle the error
-  }
-},
     
   }
 } 
