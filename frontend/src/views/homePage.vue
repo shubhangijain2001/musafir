@@ -90,9 +90,6 @@
 <script>
 import navBar1 from "../components/navBar1.vue";
 import FooTer from "../components/FooTer.vue";
-// import {
-    // onMounted
-// } from "vue";
 
 export default {
     name: 'homePage',
@@ -154,50 +151,50 @@ export default {
         this.recentPosts = [{
                 id: 1,
                 userName: 'John Doe',
-                placeName: 'Beautiful Beach',
-                image: 'https://i.ibb.co/TMnPS5w/tajmahal.jpg',
+                placeName: 'Red Fort',
+                image: 'https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Delhi.jpg',
             },
             {
                 id: 2,
                 userName: 'Jane Smith',
-                placeName: 'Serene Mountains',
-                image: 'https://i.ibb.co/NSmF12D/forest-1866544-1280.jpg',
+                placeName: 'Kaziranga National Park',
+                image: 'https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Kaziranga-national-park-Rhino.jpg',
             },
             {
                 id: 3,
                 userName: 'John Doe',
-                placeName: 'Beautiful Beach',
-                image: 'https://i.ibb.co/TMnPS5w/tajmahal.jpg',
+                placeName: 'Bibi Ka Maqbara',
+                image: 'https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Aurangabad-Bibi-qa-Maqbara.jpg',
             },
             {
                 id: 4,
                 userName: 'Jane Smith',
-                placeName: 'Serene Mountains',
-                image: 'https://i.ibb.co/NSmF12D/forest-1866544-1280.jpg',
+                placeName: 'Sunderbans',
+                image: 'https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/sunderbans-tiger-safari.jpg',
             },
             {
-                id: 1,
+                id: 5,
                 userName: 'John Doe',
                 placeName: 'Beautiful Beach',
                 image: 'https://i.ibb.co/TMnPS5w/tajmahal.jpg',
             },
             {
-                id: 2,
+                id: 6,
                 userName: 'Jane Smith',
-                placeName: 'Serene Mountains',
-                image: 'https://i.ibb.co/NSmF12D/forest-1866544-1280.jpg',
+                placeName: 'Elephant Stables',
+                image: 'https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Hampi-Karnataka.jpg',
             },
             {
-                id: 3,
+                id: 7,
                 userName: 'John Doe',
-                placeName: 'Beautiful Beach',
-                image: 'https://i.ibb.co/TMnPS5w/tajmahal.jpg',
+                placeName: 'Mysore Palace',
+                image: 'https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/mysore-palace.jpg',
             },
             {
-                id: 4,
+                id: 8,
                 userName: 'Jane Smith',
-                placeName: 'Serene Mountains',
-                image: 'https://i.ibb.co/NSmF12D/forest-1866544-1280.jpg',
+                placeName: 'Taj Mahal',
+                image: 'https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/agra-taj-mahal.jpg',
             }
         ];
     },

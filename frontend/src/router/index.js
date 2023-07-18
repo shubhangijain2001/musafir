@@ -5,7 +5,8 @@ import signUp from "../views/signUp.vue"
 import loGin from "../views/loGin.vue"
 import abOut from "../views/abOut.vue"
 import homePage from "../views/homePage.vue"
-import myPosts from "../views/myPosts.vue";
+import poSts from "../views/poSts.vue"
+import myPosts from "../views/myPosts.vue"
 
 
 const routes=[
@@ -38,6 +39,11 @@ const routes=[
         path:'/profile',
         name:'myPosts',
         component:myPosts
+    },
+    {
+        path:'/posts',
+        name:'poSts',
+        component: poSts
     }
 
 
