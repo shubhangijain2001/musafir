@@ -4,6 +4,7 @@ import firstPage from "../views/firstPage.vue"
 import signUp from "../views/signUp.vue"
 import loGin from "../views/loGin.vue"
 import abOut from "../views/abOut.vue"
+import postForm from "../components/postForm.vue"
 
 
 const routes=[
@@ -26,6 +27,11 @@ const routes=[
         path:'/about',
         name:'abOut',
         component:abOut
+    },
+    {
+        path:'/postform',
+        name:'postForm',
+        component:postForm
     }
 
 
