@@ -1,8 +1,9 @@
 <template>
 
-<div>
+
 <navBar1/>
-<postTemplate/>
+<div class="parent-div">
+    <postTemplate/>
 <FooTer/>
 </div>
 
@@ -33,6 +34,11 @@ export default{
 
 <style scoped>
 
-
+.parent-div{
+    padding-top: 50px;
+    background-image: url('https://i.ibb.co/dmr3yCD/seemless-blackbg.jpg');
+    background-repeat: repeat;
+    background-size: 20%;
+}
 
 </style>
