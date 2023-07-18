@@ -74,12 +74,11 @@
 
 export default {
   components: {
-    
+
   },
   data() {
     return {
-        carouselImages: [
-        {
+      carouselImages: [{
           id: 1,
           src: 'https://i.ibb.co/TMnPS5w/tajmahal.jpg'
         },
@@ -87,33 +86,32 @@ export default {
           id: 2,
           src: 'https://i.ibb.co/NSmF12D/forest-1866544-1280.jpg',
         },
-    ],
+      ],
       userName: 'John Doe',
       placeName: 'Akshardham Temple',
       cityName: 'Gandhinagar',
       stateName: 'Gujrat',
       postContent: "'Akshardham' literally means the divine abode of God. It is an eternal place for one to offer devotion and experience everlasting peace. Swaminarayan Akshardham at Gandhinagar is a mandir – a Hindu house of worship, a dwelling place for God, and a spiritual and cultural campus dedicated to devotion, education and unification. The spiritual premise of Akshardham is that each soul is potentially divine. Whether we are serving the family, our neighbors, the country, or people all around the world, each act of kindness can help one move towards divinity. Each prayer is an endeavor in self-improvement and a step closer to God.",
-      affordabilityRating: 2, 
-        safetyRating: 4, 
-        hospitalityRating: 5,
-        maxStars: 5,
+      affordabilityRating: 2,
+      safetyRating: 4,
+      hospitalityRating: 5,
+      maxStars: 5,
     };
   },
-};
-
-
+}
 </script>
 
 
 <style scoped>
 
 .post-container{
-  width: 80vw;
-  height: 80vh;
+  width: 90vw;
+  height: 90vh;
   background-color: #161616;
   display: flex;
   border-radius: 15px;
-  margin: 0 10%;
+  margin: auto;
+  /* margin: 0 10%; */
   align-items: center;
   
 }

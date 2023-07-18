@@ -75,7 +75,6 @@
       <img src="https://i.ibb.co/RyhKcYX/Falguni-avatar.png" alt="Falguni-avatar">
           <p>Falguni</p>
     </a>
-    <!-- Add more team members as needed -->
   </div>
 </div>
 
